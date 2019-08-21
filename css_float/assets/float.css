@@ -23,6 +23,7 @@ ul li a, figcaption a {
 /* This selector selects only IMMEDIATE (1 level deep) image element children
 of the header element */
 header > img {
+  float:left;
   width: 100px;
 }
 
@@ -73,7 +74,7 @@ h2 + .user_review {
 }
 
 nav {
-    display: inline-block;
+    float: right;
 }
 
 nav ul li {
@@ -87,18 +88,15 @@ nav ul li a {
 
 body {
     margin: 0 auto; /* Common Centering Technique */
-    width: 900px;
+    width: 80%;
 }
 
 section {
-    width: 700px;
     display: inline-block;
     vertical-align: top;
 }
 
 aside {
-    width: 180px;
-    margin-right: 15px;
     display: inline-block;
 }
 
@@ -124,3 +122,21 @@ label {
   display: block;
 }
 
+.cf::after {
+  content: "";
+  clear: both;
+  display: block;
+};
+
+.grid-container {
+  float: left;
+  width: 0;
+}
+
+.col-1-3 {
+  width: 33%;
+}
+
+.col-2-3 {
+  width: 66%;
+}
