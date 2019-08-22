@@ -8,7 +8,7 @@
 #
 
 class AnswerChoice < ApplicationRecord
-
+    validates :text, presence: true
 
     belongs_to :question,
     class_name: "Question",
@@ -18,5 +18,5 @@ class AnswerChoice < ApplicationRecord
     class_name: "Response",
     foreign_key: :answerchoice_id
 
-    
+
 end

@@ -8,7 +8,7 @@
 #
 
 class Question < ApplicationRecord
-    
+    validates :text, presence: true
 
     has_many :answer_choices,
     class_name: "AnswerChoice",
@@ -18,5 +18,7 @@ class Question < ApplicationRecord
     class_name: "Poll",
     foreign_key: :poll_id
 
-    
+    has_many :responses,
+    through: :answer_choices,
+    source: :responses
 end
